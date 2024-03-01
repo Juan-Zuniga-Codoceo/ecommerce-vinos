@@ -1,10 +1,11 @@
+
 <template>
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #2c4959; height: 100px;">
     <div class="container-fluid justify-content-between">
       <!-- Logo en una esquina -->
       <router-link to="/" class="navbar-brand" style="padding: 50px;">
-        <img src="@/assets/img/logo2.png" alt="Logo" style="max-height: 120px; filter: brightness(0) invert(1);">
-      </router-link>
+  <img :src="logo2" alt="Logo" style="max-height: 120px; filter: brightness(0) invert(1);">
+</router-link>
 
 
       <!-- Navbar centralizado -->
@@ -45,11 +46,13 @@
 </template>
 
 <script>
+import logo2 from '@/assets/img/logo2.png';
 export default {
   name: 'NavigationBar',
   data() {
     return {
-      drawer: false
+      drawer: false,
+      logo2: logo2
     }
   },
   methods: {
